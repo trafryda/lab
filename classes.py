@@ -1,7 +1,6 @@
 class Television:
     """
     A class representing details for an object, Television.
-    
     """
     
     MIN_CHANNEL = 0  # Minimum TV channel
@@ -13,7 +12,6 @@ class Television:
     def __init__(self):
         """
         Constructer to create intial state of the Television object.
-        
         """
 
         self.__channel = Television.MIN_CHANNEL
@@ -23,8 +21,8 @@ class Television:
     def power(self):
         """
         Method for changing the power of the television to on or off.
-        
         """
+        
         if self.__TV_power == 'False':
             self.__TV_power = 'True'
 
@@ -34,8 +32,8 @@ class Television:
     def channel_up(self):
         """
         Method for changing the channel on the television up 1.
-        
         """
+        
         if self.__TV_power == 'True':
             if self.__channel == Television.MAX_CHANNEL:
                 self.__channel = Television.MIN_CHANNEL
@@ -46,8 +44,7 @@ class Television:
 
     def channel_down(self):
         """
-        Method for changing the channel on the television down 1.
-        
+        Method for changing the channel on the television down 1. 
         """
 
         if self.__TV_power == 'True':
@@ -61,8 +58,8 @@ class Television:
     def volume_up(self):
         """
         Method for turning the volume on the television up 1.
-        
         """
+        
         if self.__TV_power == 'True':
             if self.__volume == Television.MAX_VOLUME:
                 self.__volume = Television.MAX_VOLUME
@@ -74,8 +71,8 @@ class Television:
     def volume_down(self):
         """
         Method for turning the volume on the television down 1.
-        
         """
+        
         if self.__TV_power == 'True':
             if self.__volume == Television.MIN_VOLUME:
                 self.__volume = Television.MIN_VOLUME
@@ -88,7 +85,6 @@ class Television:
         """
         Method for printing out the current status of the television.
         :return: Whether the TV is on or off, What channel the TV is on, and the volume of the TV.
-        
         """
         return 'TV status: Is on = {}, Channel = {}, Volume = {}'.format(self.__TV_power, self.__channel, self.__volume)
     
